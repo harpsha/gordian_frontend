@@ -1,0 +1,30 @@
+#HYrdQAixahzN {
+    margin-bottom: 30px;
+    padding: 20px 10px;
+    background: #D30000;
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+    border-radius: 5px;
+
+}
+
+.adblocker-disable-link{
+    color : white;
+    font-weight : 600;
+    text-decoration:  none;
+}
+.adblocker-disable-link:hover{
+    color : white;
+    text-decoration:  none;
+}
+
+.adblocker-disable-link:focus{
+    color : white;
+    text-decoration:  none;
+    outline : none;
+}
+
+*:focus{
+    outline:none;
+}
