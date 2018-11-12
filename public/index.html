@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="theme-color" content="#000000">
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+  <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <title>Flight App</title>
+ </head>
+ <script>
+  var cartItems = [];
+  var ad_blocker = true;
+</script>
+<body>
+  <noscript>
+    You need to enable JavaScript to run this app.
+  </noscript>
+  <div id="root">
+  </div>
+  <!-- modal_loader, react_gordian_loader and ancillary_anchor handle gordian ancillary overlay popup -->
+  <div class="modal_loader" id="modal_loader" name="modal_loader">
+  </div>
+
+  <div class="react_gordian_modal" id="react_gordian_modal" name="react_gordian_modal">
+  </div>
+
+  <div class="ancillary_anchor" id="ancillary_anchor" name="ancillary_anchor">
+  </div>
+  <!-- Fake div to detect whether adblock is present or not -->
+  <div id="wrapfabtest">
+    <div class="ads_banner">
+      
+      &nbsp;
+    </div>
+  </div>
+  
+</body>
+<!-- <script src="ads_banner" >
+  // $(document).ready(function () {
+  //   if ($("#wrapfabtest").height() > 0) {
+  //     window.ourComponent.handleAdBlocker(false);
+  //   } else {
+  //     window.ourComponent.handleAdBlocker(true);
+  //   }
+  // });
+  window.ad_blocker = false
+ </script> 
+ <script>
+ 
+ window.ourComponent.handleAdBlocker(window.ad_blocker)</script>
+ -->
+<script> 
+  // gordianResponse receives array of items that user adds in gordian ancillary overlay popup
+  function gordianResponse() {
+    
+    cartItems = arguments[0];
+
+    document.getElementById("modal_loader").style.display = "none";
+    document.getElementById("react_gordian_modal").style.display = "none"
+    document.getElementById("ancillary_anchor").style.display = "none"
+   
+    window.ourComponent.handleStateChange();
+
+  }
+</script>
+
+</html>

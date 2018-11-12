@@ -1,0 +1,46 @@
+.cart-item-container {
+    width: 94%;
+    
+    margin: 2px 3%;
+    background-color: #F5F5F5;
+    border: 1px solid lightgray;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+
+}
+
+.cart-item-time {
+    padding: 2px 5px;
+    margin-left: 4px;
+    display: inline-block;
+}
+
+.cart-item-carrierInfo{
+    display: inline-block;
+}
+.cart-item-carrierInfo img, .cart-item-carrierInfo h5 {
+    display: inline-block;
+}
+
+.cart-item-seatNumber {
+    display: inline-block;
+}
+
+.cart-item-seatInfo {
+    display: inline-block;
+}
+
+
+.cart-item-priceInfo {
+    display: inline-block;
+}
+
+.cart-item-deleteButton{
+    margin-right: 8px;
+    display: inline-block;
+
+}
+
